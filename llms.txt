@@ -1,0 +1,60 @@
+<!--
+generated_by: tessera
+source_sha: e5ab79ad1c30bb2e87498dd4d80a1aea7d275c39
+generated_at: 2026-02-08T09:42:32.285Z
+action: create
+-->
+
+# Tic Tac Toe Game - Technical Context
+
+## Architecture Overview
+
+This is a simple command-line Python application implementing the classic Tic Tac Toe game. The codebase follows object-oriented programming principles with a single `TicTacToe` class containing all game logic.
+
+## Key Files and Their Purposes
+
+- `tic_tac_toe.py`: Main game file containing the `TicTacToe` class and `main()` function. This is the entry point for the application.
+
+## Architecture Decisions and Patterns
+
+- **Object-Oriented Design**: The game is encapsulated in a `TicTacToe` class, allowing for easy state management and potential future extensions (e.g., multiple games, AI opponents).
+- **State Management**: Game state is maintained through instance variables like `board`, `current_player`, `winner`, etc.
+- **Separation of Concerns**: Methods are separated by functionality (display, move validation, win checking, player switching).
+- **Input Validation**: Robust error handling for invalid inputs, with user-friendly messages.
+- **Immutable Win Conditions**: Winning combinations are predefined as a list of tuples for easy maintenance.
+
+## Data Structures and Logic
+
+- **Board Representation**: A list of 9 strings, initialized with spaces, representing the 3x3 grid.
+- **Win Detection**: Checks all 8 possible winning combinations (3 rows, 3 columns, 2 diagonals) after each move.
+- **Game Flow**: Main loop in `play()` method handles turns, input, validation, and game end conditions.
+- **Player Switching**: Simple toggle between 'X' and 'O'.
+
+## Dependencies and Environment
+
+- **Language**: Python 3.6+
+- **External Libraries**: None (uses only built-in Python features)
+- **Execution**: Runs as a command-line script, can be made executable on Unix-like systems.
+
+## Business Logic
+
+The core business logic revolves around Tic Tac Toe rules:
+- Two players alternate turns placing marks on a 3x3 grid.
+- Win condition: Three marks in a row (horizontal, vertical, or diagonal).
+- Tie condition: All spaces filled without a winner.
+- Input validation ensures moves are within bounds and on empty spaces.
+
+## Potential Extension Points
+
+- AI opponent integration
+- GUI implementation
+- Network multiplayer
+- Game statistics tracking
+- Custom board sizes
+
+## Code Quality Notes
+
+- Well-documented with docstrings
+- Clear method names and variable names
+- Handles edge cases like invalid input and interruptions
+- User-friendly output with emojis for better CLI experience
