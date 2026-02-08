@@ -4,13 +4,19 @@ A simple command-line implementation of the classic Tic Tac Toe game written in 
 
 ## Features
 
-- Clean command-line interface
+- Clean command-line interface with emoji indicators
 - Two-player gameplay
-- Input validation
+- **Enhanced move validation with detailed feedback**
+- **Real-time move confirmation messages**
+- **Available positions display**
+- **Move counter and game statistics**
+- **Winning combination announcement** (e.g., "Top Row", "Diagonal")
 - Win detection (rows, columns, diagonals)
 - Tie game detection
 - Play again option
 - Position guide for easy reference
+- **Comprehensive game rules displayed at start**
+- **Error messages for invalid inputs**
 
 ## Requirements
 
@@ -61,17 +67,57 @@ chmod +x tic_tac_toe.py
 ## Example Gameplay
 
 ```
-Player X's turn
-Enter position (1-9): 5
+========================================
+  Welcome to Tic Tac Toe!
+========================================
 
- X |   |   
+📋 Game Rules:
+   • Two players take turns (X and O)
+   • First to get 3 in a row wins!
+   • Rows, columns, or diagonals count
+   • If all 9 spaces fill up, it's a tie
+
+Position Guide:
+ 1 | 2 | 3 
+---|---|---
+ 4 | 5 | 6 
+---|---|---
+ 7 | 8 | 9 
+
+💡 Tip: Use the position numbers (1-9) to make your move
+
+
+   |   |   
+---|---|---
+   |   |   
+---|---|---
+   |   |   
+
+🎮 Move #1 - Player X's turn
+📍 Available positions: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Enter position (1-9): 5
+✅ Valid move! Player X placed at position 5
+
+
+   |   |   
 ---|---|---
    | X |   
 ---|---|---
    |   |   
 
-Player O's turn
+🎮 Move #2 - Player O's turn
+📍 Available positions: 1, 2, 3, 4, 6, 7, 8, 9
 Enter position (1-9): 1
+✅ Valid move! Player O placed at position 1
+
+[Game continues...]
+
+🎯 Winning combination: Diagonal (Top-Left to Bottom-Right)!
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+   🏆 PLAYER X WINS! 🏆
+🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉
+
+✨ Game completed in 9 moves!
 ```
 
 ## Project Structure
